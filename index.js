@@ -6,7 +6,7 @@ const axios = require("axios").default;
 // const request = require("request");
 require('dotenv').config()
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const APIKEY = process.env.APIKEY
 
 
