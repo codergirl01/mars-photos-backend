@@ -5,11 +5,18 @@ const app = express();
 const axios = require("axios").default;
 // const request = require("request");
 require('dotenv').config()
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
 
 const PORT = process.env.PORT || 5000;
 const APIKEY = process.env.APIKEY
 
 
+app.use(cors(corsOptions)) 
 app.use(express.json());
 
 // mongoose.connect(
